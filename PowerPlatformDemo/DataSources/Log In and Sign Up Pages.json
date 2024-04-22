@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_loginandsignuppages",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_loginandsignuppage",
+    "MaxGetRowsCount": 500,
+    "Name": "Log In and Sign Up Pages",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_column6": "Column 6",
+      "crb87_column7": "Column 7",
+      "crb87_email": "Email",
+      "crb87_firstname": "First name",
+      "crb87_lastname": "Last name",
+      "crb87_loginandsignuppage_AsyncOperations": "System Jobs",
+      "crb87_loginandsignuppage_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_loginandsignuppage_DuplicateBaseRecord": "Duplicate Records (crb87_loginandsignuppage_DuplicateBaseRecord)",
+      "crb87_loginandsignuppage_DuplicateMatchingRecord": "Duplicate Records (crb87_loginandsignuppage_DuplicateMatchingRecord)",
+      "crb87_loginandsignuppage_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_loginandsignuppage_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_loginandsignuppage_ProcessSession": "Process Sessions",
+      "crb87_loginandsignuppage_SyncErrors": "Sync Errors",
+      "crb87_loginandsignuppageid": "Log In and Sign Up Page",
+      "crb87_name": "Name",
+      "crb87_password": "Password",
+      "crb87_securityquestion": "Security question",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Log In and Sign Up Pages",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Log In and Sign Up Pages (Views)",
+    "Name": "_crb87_loginandsignuppage_views",
+    "RelatedEntityName": "Log In and Sign Up Pages",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "267b9687-42f6-4958-bb1a-faac6a7479e0": "Log In and Sign Up Page Lookup View",
+      "2b7b3bea-d3a0-4382-bd48-92f738ba79c5": "Log In and Sign Up Page Associated View",
+      "2d436f27-ed54-44a4-9328-3b152ca09562": "Inactive Log In and Sign Up Pages",
+      "d6d0ce7d-ac00-4483-b802-079a60248555": "Active Log In and Sign Up Pages",
+      "e7fabeb1-f276-46d8-b302-6155f84d4fe8": "Log In and Sign Up Page Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Log In and Sign Up Pages)",
+    "Name": "crb87_loginandsignuppage_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Log In and Sign Up Pages"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Log In and Sign Up Pages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Log In and Sign Up Pages)",
+    "Name": "crb87_loginandsignuppage_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Log In and Sign Up Pages"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Log In and Sign Up Pages",
+    "Type": "OptionSetInfo"
+  }
+]

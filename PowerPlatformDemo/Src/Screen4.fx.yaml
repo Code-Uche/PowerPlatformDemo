@@ -1,0 +1,449 @@
+Screen4 As screen:
+
+    Form1 As form.PowerApps_CoreControls_Form:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        ContentLanguage: ="English"
+        DataSource: =FormTables
+        DefaultMode: =FormMode.New
+        Height: =528
+        NumberOfColumns: =1
+        OnSuccess: |
+            =Notify("Form submitted successfully.", NotificationType.Success)
+        UseFluentV9Cards: =true
+        Width: =772
+        X: =306
+        Y: =120
+        ZIndex: =1
+
+        Username_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_name"
+            Default: =ThisItem.Username
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_name")
+            Required: =true
+            Update: =DataCardValue1.Value
+            Visible: =false
+            Width: =767
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue1 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        Email_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_email"
+            Default: =ThisItem.Email
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_email")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_email")
+            Required: =true
+            Update: =DataCardValue2.Value
+            Width: =767
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey2 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue2 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                ZIndex: =2
+
+            ErrorMessage2 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+        "'Confirm Email_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_confirmemail"
+            Default: =ThisItem.'Confirm Email'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_confirmemail")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_confirmemail")
+            Required: =true
+            Update: =DataCardValue5.Value
+            Width: =767
+            WidthFit: =false
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey5 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue5 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                ZIndex: =2
+
+            ErrorMessage5 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+        "'New Password_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_newpassword"
+            Default: =ThisItem.'New Password'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_newpassword")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_newpassword")
+            Required: =true
+            Update: =DataCardValue6.Value
+            Width: =767
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue6 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 4
+                ZIndex: =2
+
+            ErrorMessage6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+        "'Confirm New Password_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_confirmnewpassword"
+            Default: =ThisItem.'Confirm New Password'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_confirmnewpassword")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_confirmnewpassword")
+            Required: =true
+            Update: =DataCardValue7.Value
+            Width: =767
+            X: =0
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey7 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue7 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 4
+                ZIndex: =2
+
+            ErrorMessage7 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+        "'Security Question_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crb87_securityquestion"
+            Default: =ThisItem.'Security Question'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@FormTables],DataSourceInfo.DisplayName,"crb87_securityquestion")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            MaxLength: =DataSourceInfo([@FormTables], DataSourceInfo.MaxLength, "crb87_securityquestion")
+            Required: =true
+            Update: =DataCardValue8.Value
+            Width: =767
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey8 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue8 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                BasePaletteColor: =
+                DisplayMode: =Parent.DisplayMode
+                FontColor: =
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 4
+                ZIndex: =2
+
+            ErrorMessage8 As Text:
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue8.Y + DataCardValue8.Height
+                ZIndex: =3
+
+            StarVisible8 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey8.Y
+                ZIndex: =4
+
+    Button2 As button:
+        BorderThickness: =0
+        Fill: =RGBA(140, 20, 204, 1)
+        OnSelect: =Navigate(Screen5,ScreenTransition.UnCover)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Text: ="Submit"
+        Tooltip: ="submit form"
+        X: =477
+        Y: =690
+        ZIndex: =3
+
+    Label2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =56
+        PaddingBottom: =15
+        Size: =18
+        Text: ="Create a new password"
+        Width: =356
+        X: =306
+        Y: =64
+        ZIndex: =4
+

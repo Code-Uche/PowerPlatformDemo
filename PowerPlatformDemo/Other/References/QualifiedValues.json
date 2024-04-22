@@ -1,0 +1,18 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_crb87_loginandsignuppage_forms",
+      "Namespace": "Log In and Sign Up Pages (Forms)",
+      "Values": {
+        "Information": "a5fc3c5f-21d2-4671-8484-740cdef07127"
+      }
+    },
+    {
+      "Kind": "default.cds_crb87_formtable_forms",
+      "Namespace": "FormTables (Forms)",
+      "Values": {
+        "Information": "f482c0cd-25a0-46ed-9235-e61795d911fa"
+      }
+    }
+  ]
+}

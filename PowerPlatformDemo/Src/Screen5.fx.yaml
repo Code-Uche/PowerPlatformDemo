@@ -1,0 +1,57 @@
+"Screen5 As screen.'tabletLayout_Success_ver3.0'":
+
+    iconCircle4 As circle.Circle:
+        Fill: =RGBA(40, 134, 222, 1)
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =1
+
+    iconCheck4 As icon.Check:
+        Height: =iconCircle4.Height
+        Icon: =Icon.Check
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        Width: =iconCircle4.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =2
+
+    LblSuccessMsg4 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Height: =iconCircle4.Height
+        Size: =20
+        Text: |
+            ="Form was successfully submitted."
+        Width: =Parent.Width * 0.75
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =iconCheck4.Y + iconCheck4.Height + 100
+        ZIndex: =3
+
+    Timer2 As timer:
+        AutoStart: =true
+        Duration: =3500
+        OnTimerEnd: |-
+            =Set(ShowRedirectLabel, true); // Set a variable to show the redirecting label
+            
+            Navigate(Screen1,ScreenTransition.None)
+        Visible: =false
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+    RedirectLabel As label:
+        Color: =RGBA(139, 154, 159, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Lighter
+        Height: =54
+        Size: =15
+        Text: ="Redirecting to login page..."
+        Visible: =ShowRedirectLabel
+        Width: =327
+        X: =868
+        Y: =40
+        ZIndex: =5
+

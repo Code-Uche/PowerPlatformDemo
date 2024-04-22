@@ -1,0 +1,117 @@
+Screen1 As screen:
+    BackgroundImage: =
+
+    SneakerLabel As label:
+        Color: =RGBA(0, 134, 208, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Height: =76
+        OnSelect: =Navigate(Screen3,ScreenTransition.None)
+        Size: =40
+        Text: ="Sneaker"
+        Tooltip: ="facebook"
+        Width: =318
+        X: =50
+        Y: =30
+        ZIndex: =1
+
+    LoginLabel As label:
+        Align: =Align.Center
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =25
+        Text: ="Log in"
+        Width: =194
+        X: =507
+        Y: =171
+        ZIndex: =3
+
+    EmailILabel As label:
+        Size: =17
+        Text: ="Email"
+        Width: =108
+        X: =192
+        Y: =285
+        ZIndex: =4
+
+    EmailInput As text:
+        Default: =""
+        Height: =66
+        HintText: ="Enter email"
+        Width: =494
+        X: =455
+        Y: =270
+        ZIndex: =5
+
+    PasswordLabel As label:
+        Size: =17
+        Text: ="Password"
+        X: =192
+        Y: =398
+        ZIndex: =6
+
+    PasswordInput As text:
+        Default: =""
+        Height: =80
+        HintText: ="Enter password"
+        Width: =494
+        X: =455
+        Y: =398
+        ZIndex: =7
+
+    ForgetPassword As label:
+        OnSelect: =Navigate(Screen4,ScreenTransition.None)
+        Text: ="forget password?"
+        X: =799
+        Y: =514
+        ZIndex: =8
+
+    Button1 As button:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(137, 28, 214, 1)
+        Height: =52
+        OnSelect: |
+            =If(
+                IsEmpty('Log In and Sign Up Pages') || IsEmpty('Log In and Sign Up Pages'),
+                Notify("Please enter both email and password.", NotificationType.Error),
+                If(
+                    !IsMatch(EmailInput.Text, "^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"),
+                    Notify("Invalid email format.", NotificationType.Error),
+                    If(
+                        !IsEmpty(Filter('Log In and Sign Up Pages', Email = EmailInput.Text && Password = PasswordInput.Text)),
+                        Navigate(Screen2, ScreenTransition.Fade),
+                        Notify("Incorrect email or password.", NotificationType.Error)
+                    )
+                )
+            )
+        Text: ="Log in"
+        X: =597
+        Y: =554
+        ZIndex: =9
+
+    MongerLabel As label:
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        OnSelect: =Navigate(Screen3,ScreenTransition.None)
+        Size: =35
+        Text: ="Monger"
+        Width: =218
+        X: =266
+        Y: =34
+        ZIndex: =10
+
+    Image2 As image:
+        Height: =109
+        Image: ='istockphoto-484752232-612x612'
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Width: =206
+        X: =507
+        Y: =30
+        ZIndex: =11
+

@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_formtables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_formtable",
+    "MaxGetRowsCount": 500,
+    "Name": "FormTables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_confirmemail": "Confirm Email",
+      "crb87_confirmnewpassword": "Confirm New Password",
+      "crb87_description": "Description",
+      "crb87_email": "Email",
+      "crb87_formtable_AsyncOperations": "System Jobs",
+      "crb87_formtable_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_formtable_DuplicateBaseRecord": "Duplicate Records (crb87_formtable_DuplicateBaseRecord)",
+      "crb87_formtable_DuplicateMatchingRecord": "Duplicate Records (crb87_formtable_DuplicateMatchingRecord)",
+      "crb87_formtable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_formtable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_formtable_ProcessSession": "Process Sessions",
+      "crb87_formtable_SyncErrors": "Sync Errors",
+      "crb87_formtableid": "FormTable",
+      "crb87_name": "Username",
+      "crb87_newpassword": "New Password",
+      "crb87_phonenumber": "Phone Number",
+      "crb87_securityquestion": "Security Question",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "FormTables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "FormTables (Views)",
+    "Name": "_crb87_formtable_views",
+    "RelatedEntityName": "FormTables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "210fb4dd-5e51-4e2a-95ad-494d7d7a6c4a": "FormTable Lookup View",
+      "410fc34a-0500-4055-b1e8-0c6ebe7a055d": "FormTable Associated View",
+      "608de96c-a7be-4ae6-8be0-29d36a1f288e": "Inactive FormTables",
+      "99e2b8cd-163e-4a7b-8f29-f79931c8bd16": "FormTable Advanced Find View",
+      "f85d338a-5ad5-49a1-8375-269a2e6f254c": "Active FormTables"
+    }
+  },
+  {
+    "DisplayName": "Status (FormTables)",
+    "Name": "crb87_formtable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "FormTables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "FormTables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (FormTables)",
+    "Name": "crb87_formtable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "FormTables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "FormTables",
+    "Type": "OptionSetInfo"
+  }
+]

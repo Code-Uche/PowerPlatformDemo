@@ -24,7 +24,9 @@
         "Width",
         "Height",
         "DisplayMode",
-        "ZIndex"
+        "ZIndex",
+        "BasePaletteColor",
+        "FontColor"
       ],
       "DynamicProperties": [
         {
@@ -86,6 +88,16 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BasePaletteColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FontColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -376,7 +388,8 @@
         "Y",
         "Width",
         "DisplayMode",
-        "ZIndex"
+        "ZIndex",
+        "FontColor"
       ],
       "DynamicProperties": [
         {
@@ -443,6 +456,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FontColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -931,7 +949,9 @@
         "Height",
         "DisplayMode",
         "OnSelectLogo",
-        "ZIndex"
+        "ZIndex",
+        "BasePaletteColor",
+        "FontColor"
       ],
       "DynamicProperties": [
         {
@@ -1003,6 +1023,16 @@
         {
           "Category": "Data",
           "PropertyName": "UserEmail",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BasePaletteColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FontColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2843,7 +2873,8 @@
         "Y",
         "Width",
         "DisplayMode",
-        "ZIndex"
+        "ZIndex",
+        "FontColor"
       ],
       "DynamicProperties": [
         {
@@ -2915,6 +2946,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FontColor",
           "RuleProviderType": "Unknown"
         },
         {

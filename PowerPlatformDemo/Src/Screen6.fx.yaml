@@ -28,7 +28,9 @@
             ZIndex: =2
 
             Header2 As Header:
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 Height: =75
                 LayoutMinHeight: =75
                 LayoutMinWidth: =Parent.Width
@@ -120,6 +122,7 @@
 
                         TitleText1 As Text:
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             Height: =30
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
@@ -134,6 +137,7 @@
 
                         DescriptionText2 As Text:
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             Height: =45
                             LayoutMinHeight: =32
                             LayoutMinWidth: =Parent.Width
@@ -164,7 +168,9 @@
                         Button3 As Button:
                             AccessibleLabel: ="Featured item button"
                             Appearance: ='ButtonCanvas.Appearance'.Secondary
+                            BasePaletteColor: =
                             DisplayMode: =DisplayMode.Edit
+                            FontColor: =
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96

@@ -61,6 +61,7 @@ Screen1 As screen:
         ZIndex: =7
 
     ForgetPassword As label:
+        Color: =RGBA(40, 134, 222, 1)
         OnSelect: =Navigate(Screen4,ScreenTransition.None)
         Text: ="forget password?"
         X: =799
